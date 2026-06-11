@@ -153,3 +153,6 @@ git push -u origin main
 - הסיסמה לאדמין מוגדרת ב-`VITE_ADMIN_PASSWORD` ב-`.env`
 - כישלון שליחת מייל **לא** מבטל את ההרשמה — הוא מתועד בקונסול בלבד
 - ה-`vercel.json` מוודא שניווט ישיר ל-`/cancel/TOKEN` עובד נכון
+=======
+# shuttle-tzofim
+>>>>>>> 48d75d74d690178ab1a8d5400a440f388b6aa5fc
