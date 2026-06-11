@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // כל אחד יכול ליצור הרשמה ולקרוא / לעדכן (נחוץ לביטול דרך טוקן)
+    match /registrations/{id} {
+      allow read, create, update: if true;
+      allow delete: if false;
+    }
+
+    // נסיעות חסומות — קריאה פתוחה, כתיבה פתוחה (אין auth)
+    match /blocked_rides/{id} {
+      allow read, create, delete: if true;
+      allow update: if false;
+    }
+  }
+}
